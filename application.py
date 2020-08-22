@@ -123,7 +123,7 @@ def getProducts():
             products.append(row)
             i+=1
         #print(products)
-        resp = {'products': products}
+        resp = jsonify({'products': products})
         return resp
     except Exception as e:
         print(e)
