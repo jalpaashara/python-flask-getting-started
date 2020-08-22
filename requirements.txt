@@ -1,5 +1,4 @@
 astroid==2.4.0
-awsebcli==3.18.2
 backcall==0.2.0
 blinker==1.4
 boto==2.40.0
@@ -61,7 +60,6 @@ requests==2.20.1
 s3transfer==0.3.3
 scour==0.32
 semantic-version==2.5.0
-six==1.12
 termcolor==1.1.0
 toml==0.10.0
 traitlets==4.3.3
