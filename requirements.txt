@@ -61,7 +61,7 @@ requests==2.20.1
 s3transfer==0.3.3
 scour==0.32
 semantic-version==2.5.0
-six==1.11.0
+six==1.12
 termcolor==1.1.0
 toml==0.10.0
 traitlets==4.3.3
