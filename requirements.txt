@@ -1,9 +1,6 @@
 astroid==2.4.0
 backcall==0.2.0
 blinker==1.4
-boto==2.40.0
-boto3==1.14.33
-botocore==1.15.49
 cement==2.8.2
 certifi==2020.4.5.1
 cffi==1.14.1
@@ -66,5 +63,5 @@ traitlets==4.3.3
 urllib3==1.24.2
 virtualenv==15.1.0
 wcwidth==0.1.9
-Werkzeug==0.15.3
+Werkzeug==0.15.5
 wrapt==1.12.1
