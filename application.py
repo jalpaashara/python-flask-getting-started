@@ -28,8 +28,8 @@ mysql = MySQL(application)
 google_mail_settings = {
     "MAIL_SERVER": config['smtp']['server'],
     "MAIL_PORT": config['smtp']['port'],
-    "MAIL_USE_TLS": False,
-    "MAIL_USE_SSL": True,
+    "MAIL_USE_TLS": config['smtp']['tls'],
+    "MAIL_USE_SSL": config['smtp']['ssl'],
     "MAIL_USERNAME": config['smtp']['username'],
     "MAIL_PASSWORD": config['smtp']['password'],
     "MAIL_DEFAULT_SENDER": config['smtp']['default_sender']
