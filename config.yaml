@@ -10,5 +10,5 @@ smtp:
     username: jammr.marketplace@gmail.com
     password: jammr@pacemp
     default_sender: jammr.marketplace@gmail.com
-    ssl: True
+    ssl: False
     tls: True
