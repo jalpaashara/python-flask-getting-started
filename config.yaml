@@ -6,9 +6,9 @@ mysql:
 
 smtp:
     server: smtp.gmail.com
-    port: 587
+    port: 465
     username: jammr.marketplace@gmail.com
     password: jammr@pacemp
     default_sender: jammr.marketplace@gmail.com
-    ssl: False
-    tls: True
+    ssl: True
+    tls: False
