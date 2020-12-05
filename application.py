@@ -144,8 +144,6 @@ def search():
 @application.route('/products', methods=['GET'])
 def getProducts():
     try:
-        # conn = mysql.connect()
-        # cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor = mysql.connection.cursor()
         rows = cursor.execute("select id, name, categoryId, userId, description, price, "
                        "datediff(current_date(), createdDate) as days  "
@@ -287,8 +285,6 @@ def getProductsByUser(userId):
                              FROM products WHERE userId = %(userId)s
                              ORDER BY modifiedDate desc"""
             rows = cursor.execute(select_stmt, {'userId': userId})
-
-
             products = cursor.fetchall()
             resp = {'totalRecords': rows, 'products': products}
             return jsonify(resp)
@@ -342,7 +338,7 @@ def getProductsByCategoryId(categoryId):
             resp = {'totalRecords': rows, 'products': products}
             return jsonify(resp)
         except Exception as e:
-            print('345 exception: ', e)
+            print('exception: ', e)
         finally:
             cursor.close()
 
@@ -418,7 +414,7 @@ def favProduct(userId, productId):
             del_ex = cursor.execute(delete_stmt, {'userId': userId, 'productId': productId})
             print(del_ex)
             mysql.connection.commit()
-            resp = jsonify({'msg': 'Success'})
+            resp = jsonify({'isFav': False})
 
         return resp
     except Exception as e:
