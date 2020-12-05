@@ -235,7 +235,11 @@ def user(userId):
             resp = cursor._fetch_type
             return str(resp)
         elif (request.method == 'DELETE'):
-            return 'TO BE IMPLEMETED'
+            select_stmt = "DELETE FROM users WHERE id = %(userId)s"
+            cursor.execute(select_stmt, {'userId': userId})
+            mysql.connection.commit()
+            resp = jsonify({'msg': 'Success'})
+            return resp
     except Exception as e:
         print(e)
     finally:
